@@ -78,6 +78,17 @@
       %br
       = render 'shared/donatepod'
 
+
+.section
+  .title
+    .icons-heart
+    %h5.title-header
+      = t('ruhrspora.donate.title')
+  .content
+    != t('ruhrspora.donate.text', :finance_link => link_to(t('ruhrspora.donate.finance_link_text'), "http://ruhrspora.de/spenden.html", :target => "_blank"))
+
+
+
 - if AppConfig.admins.podmin_email.present?
   .section
     .title
