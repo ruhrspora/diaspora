@@ -1259,8 +1259,8 @@ en:
     not_enabled: "webfinger does not seem to be enabled for %{account}'s host"
     no_person_constructed: "No person could be constructed from this hcard."
 
-ruhrspora:
-    donate:
-      title: "Want to support us?"
-      text: "Servers and Traffic are expensive. Check out %{finance_link}  how you could donate. :)"
+  ruhrspora:
+      donate:
+        title: "Want to support us?"
+        text: "Servers and Traffic are expensive. Check out %{finance_link}  how you could donate. :)"
       finance_link_text: "ruhrspora.de/spenden.html"
