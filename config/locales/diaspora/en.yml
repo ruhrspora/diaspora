@@ -1263,4 +1263,4 @@ en:
       donate:
         title: "Want to support us?"
         text: "Servers and Traffic are expensive. Check out %{finance_link}  how you could donate. :)"
-      finance_link_text: "ruhrspora.de/spenden.html"
+        finance_link_text: "ruhrspora.de/spenden.html"
