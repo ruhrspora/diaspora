@@ -1284,6 +1284,11 @@ de:
     not_enabled: "Webfinger scheint nicht für den Server von %{account} verfügbar zu sein."
     xrd_fetch_failed: "Die XRD-Datei von %{account} konnte nicht heruntergeladen werden."
   welcome: "Willkommen!"
+  ruhrspora:
+    donate:
+      title: "Willst Du uns unterstützen?"
+      text: "Server und Traffic sind teuer. Werfe einen Blick auf %{finance_link} wie Du uns helfen kannst. :)"
+      finance_link_text: "ruhrspora.de/spenden.html"
   will_paginate:
     next_label: "nächstes &raquo;"
     previous_label: "&laquo; voriges"

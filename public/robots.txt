@@ -8,3 +8,6 @@
 User-Agent: *
 Disallow: /people/
 Disallow: /u/
+Disallow: /spenden.html
+Disallow: /legal.html
+Disallow: /imprint.html
