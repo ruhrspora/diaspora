@@ -31,6 +31,9 @@ module NavigationHelpers
           # '.diaspora_handle' on desktop, '.description' on mobile
           special_elem: { selector: '.diaspora_handle, .description', text: p.diaspora_handle }
         }
+      when /^"([^\"]*)"'s photos page$/
+        p = User.find_by_email($1).person
+        person_photos_path p
       when /^my account settings page$/
         edit_user_path
       when /^my new profile page$/
@@ -64,6 +67,11 @@ module NavigationHelpers
       await_elem = path[:special_elem]
       find(await_elem.delete(:selector), await_elem)
     end
+  end
+
+  def confirm_on_page(page_name)
+    current_path = URI.parse(current_url).path
+    current_path.should == path_to(page_name)
   end
 end
 

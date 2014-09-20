@@ -53,6 +53,17 @@ Feature: User manages contacts
 
     When I uncheck the first contact list button
     Then I should have 0 contacts in "Cat People"
+    
+  Scenario: Renaming an aspect
+    Given I am signed in
+    And I have an aspect called "Cat People"
+    When I am on the contacts page
+    And I follow "Cat People"
+    And I follow "Manage" within "#aspect_controls"
+    And I follow "rename"
+    And I fill in "aspect_name" with "Unicorn People"
+    And I press "update"
+    Then I should see "Unicorn People" within "#aspect_name_title"
 
   Scenario: infinite scroll on contacts index
     Given I am signed in
@@ -71,7 +82,7 @@ Feature: User manages contacts
 
     And I click on my name in the header
     When I follow "Contacts"
-    Then I should see "Community Spotlight" within ".span-18"
+    Then I should see "Community Spotlight" within ".span9"
 
   Scenario: clicking on the contacts link in the header with contacts does not send a user to the featured users page
     Given I am signed in
@@ -80,4 +91,4 @@ Feature: User manages contacts
 
     And I click on my name in the header
     When I follow "Contacts"
-    Then I should not see "Featured Users" within "#section_header"
+    Then I should not see "Community Spotlight" within ".span9"

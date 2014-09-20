@@ -9,19 +9,19 @@ function toggleAspectTitle(){
 }
 
 function updateAspectName(new_name) {
-  $('#aspect_name_title .name').html(new_name);
+  $('#aspect_name_title .name').text(new_name);
   $('input#aspect_name').val(new_name);
 }
 function updatePageAspectName( an_id, new_name) {
-  $('ul#aspect_nav [data-guid="'+an_id+'"]').html(new_name);
+  $('ul#aspect_nav [data-aspect-id="'+an_id+'"] .selectable').text(new_name);
 }
 
 $(document).ready(function() {
-  $('#rename_aspect_link').live('click', function(){
+  $(document).on('click', '#rename_aspect_link', function(){
     toggleAspectTitle();
   });
 
-  $('form.edit_aspect').live('ajax:success', function(evt, data, status, xhr) {
+  $(document).on('ajax:success', 'form.edit_aspect', function(evt, data, status, xhr) {
     updateAspectName(data['name']);
     updatePageAspectName( data['id'], data['name'] );
     toggleAspectTitle();
@@ -41,8 +41,8 @@ app.tmp || (app.tmp = {});
 
 // on the contacts page, viewing the facebox for single aspect
 app.tmp.ContactAspectsBox = function() {
-  $('body').on('click', '#aspect_edit_pane a.add.button', _.bind(this.addToAspect, this));
-  $('body').on('click', '#aspect_edit_pane a.added.button', _.bind(this.removeFromAspect, this));
+  $('body').on('click', '#aspect_edit_pane a.add.btn', _.bind(this.addToAspect, this));
+  $('body').on('click', '#aspect_edit_pane a.added.btn', _.bind(this.removeFromAspect, this));
 };
 _.extend(app.tmp.ContactAspectsBox.prototype, {
   addToAspect: function(evt) {

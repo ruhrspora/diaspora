@@ -4,15 +4,14 @@
  */
 //= require underscore
 //= require backbone
-//= require rails.validations
 //= require jquery.hotkeys
 //= require jquery.remotipart
 //= require jquery.autoresize
-//= require jquery-ui-1.8.9.custom.min
 //= require jquery.charcount
 //= require jquery.placeholder
-//= require timeago
+//= require rails-timeago
 //= require facebox
+//= require browser_detection
 //= require jquery.events.input
 //= require jquery.elastic
 //= require jquery.mentionsInput
@@ -26,7 +25,6 @@
 //= require punycode
 //= require parse_url
 //= require clear-form
-//= require validation
 //= require app/app
 //= require diaspora
 //= require_tree ./helpers
@@ -36,10 +34,9 @@
 //= require aspects-dropdown
 //= require contact-edit
 //= require contact-list
-//= require aspect-sorting
 //= require mentions
 //= require bootstrap-tooltip
 //= require bootstrap-popover
 //= require bootstrap-dropdown
-//= require bootstrap-scrollspy-custom
+//= require bootstrap-modal
 //= require osmlocator

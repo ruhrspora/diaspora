@@ -53,12 +53,12 @@ describe("app.views.CommentStream", function(){
       });
 
       it("adds the comment to the view", function() {
-        this.request.response({status: 200});
+        this.request.response({status: 200, responseText: '[]'});
         expect(this.view.$(".comment-content p").text()).toEqual("a new comment");
       });
 
       it("doesn't add the comment to the view, when the request fails", function(){
-        Diaspora.I18n.loadLocale({failed_to_post_message: "posting failed!"});
+        Diaspora.I18n.load({failed_to_post_message: "posting failed!"});
         this.request.response({status: 500});
 
         expect(this.view.$(".comment-content p").text()).not.toEqual("a new comment");
@@ -98,7 +98,10 @@ describe("app.views.CommentStream", function(){
 
       this.view.expandComments();
 
-      mostRecentAjaxRequest().response({ comments : [] });
+      mostRecentAjaxRequest().response({ 
+        status: 200,
+        responseText: JSON.stringify([factory.comment()])
+      });
 
       expect(this.view.$("textarea").val()).toEqual("great post!");
     });

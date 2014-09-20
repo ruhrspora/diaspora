@@ -2,7 +2,7 @@ class ConversationsController < ApplicationController
   before_filter :authenticate_user!
 
   layout ->(c) { request.format == :mobile ? "application" : "with_header" }
-  before_filter -> { @css_framework = :bootstrap }
+  use_bootstrap_for :index, :show, :new
 
   respond_to :html, :mobile, :json, :js
 
@@ -85,7 +85,7 @@ class ConversationsController < ApplicationController
     all_contacts_and_ids = Contact.connection.select_rows(
       current_user.contacts.where(:sharing => true).joins(:person => :profile).
         select("contacts.id, profiles.first_name, profiles.last_name, people.diaspora_handle").to_sql
-    ).map{|r| {:value => r[0], :name => Person.name_from_attrs(r[1], r[2], r[3]).gsub(/(")/, "'")} }
+    ).map{|r| {:value => r[0], :name => ERB::Util.h(Person.name_from_attrs(r[1], r[2], r[3]).gsub(/(")/, "'"))} }
 
     @contact_ids = ""
 
