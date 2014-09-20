@@ -4,3 +4,5 @@
 %li= link_to "spenden ", "http://ruhrspora.de/spenden.html", :target => "_blank"
 %li= link_to 'Code', "https://github.com/ruhrspora/diaspora"
 %li= link_to(t('layouts.application.toggle'), toggle_mobile_path)
+- if AppConfig.settings.terms.enable?
+    %li= link_to(t('_terms'), terms_path)
