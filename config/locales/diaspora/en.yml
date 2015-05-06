@@ -1410,7 +1410,6 @@ en:
       user: "The secret image and code were different"
       failed: "Human verification failed"
 
-<<<<<<< HEAD
   ruhrspora:
       donate:
         title: "Want to support us?"
@@ -1418,7 +1417,6 @@ en:
         finance_link_text: "ruhrspora.de/spenden.html"
 
 
-=======
   statistics:
     name: "Name"
     network: "Network"
@@ -1434,4 +1432,3 @@ en:
     disabled: "Not available"
     open: "Open"
     closed: "Closed"
->>>>>>> upstream/master
