@@ -8,6 +8,10 @@
 User-Agent: *
 Disallow: /people/
 Disallow: /u/
+<<<<<<< HEAD
 Disallow: /spenden.html
 Disallow: /legal.html
 Disallow: /imprint.html
+=======
+Disallow: /camo/
+>>>>>>> upstream/master
