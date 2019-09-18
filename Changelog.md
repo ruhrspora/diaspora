@@ -1,3 +1,52 @@
+# 0.7.12.0
+
+## Refactor
+* Harmonize markdown titles sizes [#8029](https://github.com/diaspora/diaspora/pull/8029)
+
+## Bug fixes
+* Improve handling of mixed case hostnames while fetching OpenGraph data [#8021](https://github.com/diaspora/diaspora/pull/8021)
+* Fix "remember me" with two factor authentication enabled [#8031](https://github.com/diaspora/diaspora/pull/8031)
+
+## Features
+* Add line mentioning diaspora\* on the splash page [#7966](https://github.com/diaspora/diaspora/pull/7966)
+* Improve communication about signing up on closed pods [#7896](https://github.com/diaspora/diaspora/pull/7896)
+
+# 0.7.11.0
+
+## Refactor
+* Enable paranoid mode for devise [#8003](https://github.com/diaspora/diaspora/pull/8003)
+* Refactor likes cucumber test [#8002](https://github.com/diaspora/diaspora/pull/8002)
+
+## Bug fixes
+* Fix old photos without remote url for export [#8012](https://github.com/diaspora/diaspora/pull/8012)
+
+## Features
+* Add a manifest.json file as a first step to make diaspora\* a Progressive Web App [#7998](https://github.com/diaspora/diaspora/pull/7998)
+* Allow `web+diaspora://` links to link to a profile with only the diaspora ID [#8000](https://github.com/diaspora/diaspora/pull/8000)
+* Support TOTP two factor authentication [#7751](https://github.com/diaspora/diaspora/pull/7751)
+
+# 0.7.10.0
+
+## Refactor
+* Replace dandelion.jpg with a public domain photo [#7976](https://github.com/diaspora/diaspora/pull/7976)
+
+## Bug fixes
+* Fix incorrect post sorting on tag streams and tag searches for tags containing the word "activity" [#7959](https://github.com/diaspora/diaspora/issues/7959)
+
+# 0.7.9.0
+
+## Refactor
+* Improve public stream performance and cleanup unused indexes [#7944](https://github.com/diaspora/diaspora/pull/7944)
+* Improve wording of "Toggle mobile" [#7926](https://github.com/diaspora/diaspora/pull/7926)
+
+## Bug fixes
+* Do not autofollow back a user you are ignoring [#7913](https://github.com/diaspora/diaspora/pull/7913)
+* Fix photos gallery when too many thumbnails are shown [#7943](https://github.com/diaspora/diaspora/pull/7943)
+* Fix extended profile visibility switch showing the wrong state [#7955](https://github.com/diaspora/diaspora/pull/7955)
+
+## Features
+* Support ignore users on mobile [#7884](https://github.com/diaspora/diaspora/pull/7884)
+
 # 0.7.8.0
 
 ## Refactor
