@@ -190,7 +190,6 @@ en_pirate:
       powered_by: "This ship be POWERED BY diaspora*"
       public_feed: "Sea-wide diaspora* feed for %{name}"
       source_package: "Download the blueprints! Argh!"
-      toggle: "toggl' mobile site"
       whats_new: "what be new?"
     header:
       code: "Code"
@@ -409,7 +408,6 @@ en_pirate:
       updated: "Ye profile updated"
   public: "The Sea can see this"
   registrations:
-    closed: "Signups be closed on this ship!"
     create:
       success: "Ye've joined diaspora*! YARGH!"
     invalid_invite: "The invite link ye provided is no longer valid ye scalawag! Yar!"

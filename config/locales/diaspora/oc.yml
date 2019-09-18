@@ -130,6 +130,8 @@ oc:
       remove_admin: "Quitar d’èsser admin"
       remove_moderator: "Quitar d’èsser moderator"
       remove_spotlight: "Tirar dels especials de la comunitat"
+      role_implemented: "Òm a ja donat aquel ròtle a %{name} !"
+      role_removal_implemented: "Òm a ja tirat aquel ròtle a %{name} !"
       under_13: "Mostrar los utilizaires qu'an mens de 13 ans (COPPA)"
       unlock_account: "Desverrolhar lo compte"
       users:
@@ -206,6 +208,7 @@ oc:
         tos: "Veire las condicions d'utilizacion de l'aplicacion"
   are_you_sure: "Sètz segur ?"
   are_you_sure_delete_account: "Sètz segur que volètz tampar vòstre compte ? Aquò se pòt pas anullar !"
+  are_you_sure_ignore_user: "Sètz per ignorar aquel utilizaire. Confirmatz ?"
   aspect_memberships:
     destroy:
       failure: "La persona a pas pogut èsser levada de l'aspècte amb succès."
@@ -592,9 +595,11 @@ oc:
       byline: "La ret sociala ont gardatz lo contraròtle."
       choose_your_audience: "Causissètz vòstre public"
       choose_your_audience_info: "Los aspèctes de diaspora* vos permeton de partejar solament amb lo mond que volètz. Podètz èsser public o privat tan que volètz. Partejatz una fòto divertissenta amb lo mond complet, o un grand secrèt amb vòstre melhors amics. Avètz lo contraròtle."
+      diaspora_site_link: "Malhum federat diapora*"
       headline: "Benvenguda sus %{pod_name}"
       own_your_data: "Siatz proprietari de vòstras donadas"
       own_your_data_info: "Mantun rets emplegan vòstras donadas per se far de moneda en analisant vòstras interaccions e en emplegant aquelas informacions per vos far de reclama. diaspora* utilizant pas vòstras donadas que per vos permetre de comunicar e partejar amb lo mond."
+      part_of_diaspora: "Membre del %{diaspora_site_link}"
     podmin:
       byline: "Sètz a mand de cambiar la fàcia d'Internet. Prèst a vos lançar ?"
       configuration_info: "Dobrissètz %{database_path} e %{diaspora_path} dins vòstre editor de tèxte favorit e relegissètz-los menimosament, son comentats abondament."
@@ -645,7 +650,8 @@ oc:
       public_feed: "Flux diaspora* public per %{name}"
       source_package: "Telecargatz lo còdi font"
       statistics_link: "Estatisticas del pod"
-      toggle: "Activar/desactivar la version mobila"
+      switch_to_standard_mode: "Passar al mòde estandard"
+      switch_to_touch_optimized_mode: "Passar al mòde optimizat pel tactil"
       whats_new: "Qué de nòu ?"
     header:
       code: "Còdi"
@@ -988,7 +994,8 @@ oc:
       updated: "Perfil a jorn"
   public: "Public"
   registrations:
-    closed: "Las inscripcions son tampadas sus aqueste pod diaspora*."
+    closed:
+      another_pod: "un autre pod"
     create:
       success: "Avètz rejunt diaspora*!"
     invalid_invite: "Lo ligam de convit donat es pas mai valid !"
@@ -1176,6 +1183,30 @@ oc:
         one: "1 persona marcada amb %{tag}"
         other: "%{count} personas marcadas amb %{tag}"
         zero: "Degun es pas marcat amb %{tag}"
+  two_factor_auth:
+    activated:
+      change_button: "Desactivar"
+      change_label: "Desactivatz l’autentificacion en dos temps en picar vòstre senhal"
+      status: "Autentificacion en dos temps activiada"
+    confirm:
+      activate_button: "Confirmar e activar"
+      input_title: "Confirmar amb un geton TOTP"
+      scan_title: "Numerizar lo còdi QR"
+      title: "Confirmatz l’activacion"
+    deactivated:
+      change_button: "Activar"
+      change_label: "Activar l’autentificacion en dos temps"
+      status: "L’autentificacion en dos temps es pas activada"
+    flash:
+      error_token: "Lo geton èra incorrècte o invalid"
+      success_activation: "Autentificacion en dos temps corrèctament activada"
+      success_deactivation: "Autentificacion en dos temps corrèctament desactivada"
+    input_token:
+      label: "Geton dos factors"
+    recovery:
+      button: "Generar de nòus còdis de recuperacion"
+      title: "Còdis de recuperacion"
+    title: "Autentificacion en dos temps"
   username: "Nom d'utilizaire"
   users:
     confirm_email:
@@ -1224,6 +1255,7 @@ oc:
       new_password: "Senhal novèl"
       private_message: "avètz recebut un messatge privat."
       protocol_handler:
+        browser: "Aqueste protocòl es a una etapa experimentala e lo bon foncionament de las interraccions depend del navigador. Se volètz gerir o tirar aqueste gestionari, avètz d’utilizar los paramètres del navegador. Lo boton çai-jos serà totjorn activat, vos caldrà configurar lo gestionari a despart en cada navegador qu’utilizatz."
         description: "Clicatz lo boton per configurar lo navegador per permetre la dobertura de las URL web+diaspora:// a partir de vòstre pod preferit. Aquò es experimental pel moment e las interaccions dependràn de vòstre navegador."
         register: "Enregistrar"
         title: "Gestionari de protocòl web+diaspora://"

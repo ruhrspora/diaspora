@@ -326,7 +326,6 @@ eo:
       powered_by: "FUNKCIAS PER DIASPORA*"
       public_feed: "Publika DIASPORA* Afiŝostrio de %{name}"
       source_package: "elŝutu la pakaĵon kun la fontkodo"
-      toggle: "ŝalti inter tiu kaj poŝtelefona versio"
       whats_new: "kio estas nova?"
     header:
       code: "kodo"
@@ -530,7 +529,6 @@ eo:
       updated: "Profilo ĝisdatigita"
   public: "Publika"
   registrations:
-    closed: "Registrado estas fermita ĉe tiu ĉi DIASPORA* 'pod' (servilo)."
     create:
       success: "Vi aniĝis al DIASPORA*!"
     invalid_invite: "La invitoligilo, kiun vi donis, ne plu validas!"
